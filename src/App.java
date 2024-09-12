@@ -10,17 +10,17 @@ public class App {
     public static void main(String[] args) {
         
         Cliente[] clientes = {
-            new Cliente("Breno", 20, "123.123.123-54"),
-            new Cliente("Ana", 25, "234.234.234-65"),
-            new Cliente("Carlos", 30, "345.345.345-76"),
-            new Cliente("Diana", 35, "456.456.456-87")
+            new Cliente("Julio Pereira", 20, "123.123.123-54"),
+            new Cliente("Ana Carolina", 25, "234.234.234-65"),
+            new Cliente("Carlos Miguel", 30, "345.345.345-76"),
+            new Cliente("Diana Jungle", 35, "456.456.456-87")
         };
 
         Funcionario[] funcionarios = {
-            new Funcionario("Jose", 44, 001, 1500),
-            new Funcionario("Maria", 35, 002, 1600),
-            new Funcionario("Pedro", 40, 003, 1700),
-            new Funcionario("Luana", 28, 004, 1800)
+            new Funcionario("Jose Alvaro", 44, 001, 1500),
+            new Funcionario("Maria Amora", 35, 002, 1600),
+            new Funcionario("Pedro Scooby", 40, 003, 1700),
+            new Funcionario("Luana Piovani", 28, 004, 1800)
         };
 
         Frota[] carros = {
@@ -75,7 +75,7 @@ public class App {
                 Funcionario funcionarioSelecionado = (Funcionario) comboFuncionario.getSelectedItem();
                 Sistema sistema = new Sistema(clienteSelecionado, carroSelecionado, funcionarioSelecionado);
                 sistema.pegarCarro();
-                display.append("Pegou Carro: " + carroSelecionado.getModelo() + "\n");
+                display.append("PegarCarro() " + carroSelecionado.getModelo() + "\n");
             }
         });
         panel.add(btnPegarCarro);
@@ -89,7 +89,7 @@ public class App {
                 Funcionario funcionarioSelecionado = (Funcionario) comboFuncionario.getSelectedItem();
                 Sistema sistema = new Sistema(clienteSelecionado, carroSelecionado, funcionarioSelecionado);
                 sistema.devolverCarro();
-                display.append("Devolveu Carro: " + carroSelecionado.getModelo() + "\n");
+                display.append("DevolverCarro() " + carroSelecionado.getModelo() + "\n");
             }
         });
         panel.add(btnDevolverCarro);
@@ -103,7 +103,7 @@ public class App {
                 Funcionario funcionarioSelecionado = (Funcionario) comboFuncionario.getSelectedItem();
                 Sistema sistema = new Sistema(clienteSelecionado, carroSelecionado, funcionarioSelecionado);
                 sistema.abastecer(50); // Aqui você pode ajustar o valor conforme necessário
-                display.append("Carro abastecido com 50L\n");
+                display.append("Abastercer() \n");
             }
         });
         panel.add(btnAbastecer);
